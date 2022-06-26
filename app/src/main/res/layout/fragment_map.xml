@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MapFragment">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<androidx.appcompat.widget.Toolbar
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/cardview_light_background">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<ImageButton
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:src="@drawable/ic_way"
+					android:id="@+id/wayButton"
+					/>
+
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:id="@+id/searchText"
+					android:textColor="@android:color/white"
+					/>
+
+				<ImageButton
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:src="@drawable/ic_search"
+					android:id="@+id/searchButton"
+					/>
+
+			</LinearLayout>
+
+		</androidx.appcompat.widget.Toolbar>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<com.yandex.mapkit.mapview.MapView
+		android:id="@+id/mapview"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" />
+
+</FrameLayout>
