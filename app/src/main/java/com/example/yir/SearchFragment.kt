@@ -6,21 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import com.example.yir.databinding.FragmentMapBinding
+import com.example.yir.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
+
+	private lateinit var binding: FragmentSearchBinding
 
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View? {
-		val view = inflater.inflate(R.layout.fragment_search, container, false)
+		binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-		val button = view.findViewById<ImageButton>(R.id.backButton)
+		val button = binding.backButton
 
 		button.setOnClickListener {
 			(activity as MainActivity)?.onNavigationItemSelected(2)
 		}
 
-		return view
+		return binding.root
 	}
 }

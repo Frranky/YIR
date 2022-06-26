@@ -24,7 +24,6 @@
 					android:src="@drawable/ic_back"
 					android:id="@+id/backButton"
 					/>
-
 			</LinearLayout>
 
 		</androidx.appcompat.widget.Toolbar>

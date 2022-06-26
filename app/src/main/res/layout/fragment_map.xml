@@ -22,7 +22,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
 					android:src="@drawable/ic_way"
-					android:id="@+id/wayButton"
+					android:id="@+id/pathButton"
 					/>
 
 				<EditText

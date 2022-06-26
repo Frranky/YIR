@@ -7,15 +7,18 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.yir.databinding.FragmentMapBinding
+import com.yandex.mapkit.Animation
 import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.directions.DirectionsFactory
 import com.yandex.mapkit.geometry.Point
+import com.yandex.mapkit.map.CameraPosition
 import com.yandex.mapkit.mapview.MapView
 
 class MapFragment : Fragment() {
 
-	private val endRoute = Point(41.275548, 69.204386) // 69.197425, 41.256773
 	lateinit var mapView: MapView
+	private lateinit var binding: FragmentMapBinding
 
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
@@ -23,22 +26,26 @@ class MapFragment : Fragment() {
 	): View? {
 		MapKitFactory.initialize(container?.context)
 		DirectionsFactory.initialize(container?.context)
-
 		super.onCreate(savedInstanceState)
-		val view = inflater.inflate(R.layout.fragment_map, container, false)
 
-		mapView = view.findViewById(R.id.mapview)
-		mapView.setOnClickListener {
-			Toast.makeText(view.context, "hui", Toast.LENGTH_SHORT).show()
-		}
+		binding = FragmentMapBinding.inflate(inflater, container,false)
 
-		val button = view.findViewById<ImageButton>(R.id.wayButton)
+		mapView = binding.mapview
+		mapView.getMap().move(
+			CameraPosition(Point(56.4977, 84.9744), 11.0f, 0.0f, 0.0f),
+			Animation(Animation.Type.SMOOTH, 0f),
+			null
+		)
 
-		button.setOnClickListener {
+		binding.pathButton.setOnClickListener {
 			(activity as MainActivity)?.onNavigationItemSelected(1)
 		}
 
-		return view
+		binding.searchButton.setOnClickListener {
+
+		}
+
+		return binding.root
 	}
 
 	override fun onStop() {
