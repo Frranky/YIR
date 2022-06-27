@@ -6,7 +6,9 @@
         <entry key="..\:/ProgAndroid/YIR/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2295" />
         <entry key="..\:/ProgAndroid/YIR/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2295" />
         <entry key="..\:/ProgAndroid/YIR/app/src/main/res/layout/activity_main.xml" value="0.17083333333333334" />
+        <entry key="..\:/ProgAndroid/YIR/app/src/main/res/layout/fragment_list_item.xml" value="0.3582427536231884" />
         <entry key="..\:/ProgAndroid/YIR/app/src/main/res/layout/fragment_map.xml" value="0.2677083333333333" />
+        <entry key="..\:/ProgAndroid/YIR/app/src/main/res/layout/fragment_path_list.xml" value="0.3453125" />
         <entry key="..\:/ProgAndroid/YIR/app/src/main/res/layout/fragment_search.xml" value="0.3582427536231884" />
         <entry key="..\:/ProgAndroid/YIR/app/src/main/res/layout/fragment_search_map.xml" value="0.5" />
         <entry key="..\:/ProgAndroid/YIR/app/src/main/res/layout/fragment_toolbar_map.xml" value="0.3582427536231884" />

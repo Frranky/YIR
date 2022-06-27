@@ -5,7 +5,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:orientation="vertical"
-	tools:context=".ui.SearchFragment">
+	tools:context=".ui.ListItemFragment">
 
 	<com.google.android.material.appbar.AppBarLayout
 		android:layout_width="match_parent"
@@ -31,36 +31,24 @@
 
 	</com.google.android.material.appbar.AppBarLayout>
 
-	<EditText
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/list"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_weight="1"
-		android:id="@+id/startText"
-		android:hint="Введите начальную точку"
-		android:textColor="@android:color/black"
-		/>
+		android:layout_height="wrap_content"
 
-	<EditText
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_weight="1"
-		android:id="@+id/finishText"
-		android:hint="Введите конечную точку"
-		android:textColor="@android:color/black"
-		/>
+
+		app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
 
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Поиск"
-		android:id="@+id/searchButton"
-		/>
-
-	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="Список маршрутов"
-		android:id="@+id/pathButton"
+		android:text="Добавить"
+		android:id="@+id/addButton"
 		/>
 
 </LinearLayout>
